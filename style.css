@@ -118,39 +118,9 @@ p {
     color: rgba(255, 255, 255, .7);
 }
 
-.d-bloc button:hover, .d-bloc button:focus {
-    color: rgba(255, 255, 255, .9);
-}
-
-.l-bloc .a-btn,
-.l-bloc .navbar a,
-.l-bloc .navbar-brand,
-.l-bloc a .icon-sm,
-.l-bloc a .icon-md,
-.l-bloc a .icon-lg,
-.l-bloc a .icon-xl,
-.l-bloc h1 a,
-.l-bloc h2 a,
-.l-bloc h3 a,
-.l-bloc h4 a,
-.l-bloc h5 a,
-.l-bloc h6 a,
-.l-bloc p a {
-    color: rgba(0, 0, 0, .6);
-}
-
 .l-bloc .a-btn:hover,
-.l-bloc .navbar a:hover,
-.l-bloc .navbar-brand:hover,
-.l-bloc a:hover .icon-sm,
-.l-bloc a:hover .icon-md,
-.l-bloc a:hover .icon-lg,
-.l-bloc a:hover .icon-xl {
+.l-bloc .navbar a:hover {
     color: rgba(0, 0, 0, 1);
-}
-
-.l-bloc .navbar-toggle .icon-bar {
-    color: rgba(0, 0, 0, .6);
 }
 
 .l-bloc .btn-wire,
@@ -223,8 +193,8 @@ p {
     font-size: 16px;
 }
 
-.navbar-nav .open .dropdown-menu > li > a {
-    text-align: inherit;
+.navbar-nav  li > a:hover {
+    color: black;
 }
 
 .nav > li a:hover,
@@ -235,11 +205,6 @@ p {
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
-}
-
-.navbar-toggle .icon-bar {
-    background-color: rgba(0, 0, 0, .5);
-    width: 26px;
 }
 
 .nav-invert .navbar .nav {
@@ -281,7 +246,6 @@ p {
     .nav-center .navbar-header,
     .nav-center .navbar-brand,
     .nav-center .nav > li {
-        float: none;
         display: inline-block;
     }
     .nav-center .site-navigation {
@@ -292,8 +256,8 @@ p {
         margin-top: 20px;
     }
     .nav-center.mini-nav .navbar-toggle {
-        float: none;
-        margin: 10px auto 0;
+        float: left;
+        margin: 10px auto 0 0;
     }
 }
 
@@ -326,8 +290,9 @@ nav .caret {
     background: rgba(0, 0, 0, .3);
 }
 
-button {
-    outline: none!important;
+button, button:focus {
+    outline: none;
+    background-color: transparent;
 }
 
 .btn-rd {
@@ -342,7 +307,13 @@ button {
 }
 
 .icon-md {
+    margin-top: 10px;
     font-size: 30px;
+    color: #FFF;
+    opacity: 0.7;
+}
+.icon-md:hover {
+    opacity: 1;
 }
 
 .icon-lg {
@@ -390,13 +361,13 @@ a[data-lightbox]:hover::before {
     font-size: 32px;
     width: 50px;
     height: 50px;
-    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
     z-index: 1;
     position: absolute;
+    right: calc(50% - 25px);
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -730,6 +701,22 @@ h3 {
     }
     .bloc-mob-center-text {
         text-align: center;
+    }
+    button {
+        position: absolute;
+        right: 10px;
+    }
+    button:hover .icon-bar, button:focus .icon-bar{
+        background-color: #F3976C;
+    }
+    .navbar-toggle .icon-bar {
+        color: rgba(0, 0, 0, .6);
+        background-color: rgba(0, 0, 0, .5);
+        display: block;
+        width: 26px;
+        height: 2px;
+        border-radius: 1px;
+        margin-top: 4px;
     }
 }
 
